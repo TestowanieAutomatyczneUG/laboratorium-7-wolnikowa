@@ -16,14 +16,14 @@ def hammingDistance(text1, text2):
 	TypeError: Inputs must be strings.
 	"""
 	if type(text1) != str or type(text2) != str:
-		raise TypeError("Both inputs must be strings.")
+		raise TypeError("Inputs must be strings.")
 	if len(text1) != len(text2):
-		raise ValueError("Texts length must be equal")
-	count = 0
+		raise ValueError("Texts must be of equal length.")
+	differentLettersCount = 0
 	for i in range(len(text1)):
 		if text1[i] != text2[i]:
-			count += 1
-	return count
+			differentLettersCount += 1
+	return differentLettersCount
 
 if __name__ == "__main__":
     import doctest
